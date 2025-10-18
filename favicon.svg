@@ -1,0 +1,20 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Favicon Lezioni IT">
+  <title>Lezioni IT</title>
+  <style>
+    .bg { fill: #3b9eff; }           /* blu tema */
+    .glyph { stroke: #ff8c42; }      /* simbolo arancione */
+    .slash { stroke: #ffffff; }      /* tag centrale bianco */
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #2d80d8; }         /* blu più profondo per dark */
+    }
+  </style>
+
+  <!-- sfondo pieno -->
+  <rect class="bg" x="0" y="0" width="64" height="64" rx="12" ry="12"></rect>
+
+  <!-- simbolo </> semplificato -->
+  <polyline class="glyph" fill="none" points="20,20 12,32 20,44" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  <line class="slash" x1="32" y1="20" x2="32" y2="44" stroke-width="6" stroke-linecap="round"></line>
+  <polyline class="glyph" fill="none" points="44,20 52,32 44,44" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+</svg>
