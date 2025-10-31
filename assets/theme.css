@@ -124,3 +124,54 @@ html[data-theme="dark"] a {
   color: #93c5fd;
 }
 /* ===== Fine fix contrasto ===== */
+/* ===== Fix contrasto per tema scuro (esteso) ===== */
+html[data-theme="dark"] .callout,
+html[data-theme="dark"] .callout-info,
+html[data-theme="dark"] .callout-warning,
+html[data-theme="dark"] .callout-success,
+html[data-theme="dark"] .note,
+html[data-theme="dark"] .tip {
+  background-color: #1c1c1c !important;
+  color: #f1f1f1 !important;
+}
+
+/* forza anche i figli tipici delle callout */
+html[data-theme="dark"] .callout *,
+html[data-theme="dark"] .callout-info *,
+html[data-theme="dark"] .callout-warning *,
+html[data-theme="dark"] .callout-success *,
+html[data-theme="dark"] .note *,
+html[data-theme="dark"] .tip * {
+  color: #f1f1f1 !important;
+}
+
+/* varianti leggere delle tue box */
+html[data-theme="dark"] .callout-info {
+  background-color: #1e2a2a !important;
+  border-left: 4px solid #2dd4bf !important;
+}
+
+html[data-theme="dark"] .callout-warning {
+  background-color: #2a251b !important;
+  border-left: 4px solid #facc15 !important;
+}
+
+html[data-theme="dark"] .callout-success {
+  background-color: #1b2a1c !important;
+  border-left: 4px solid #4ade80 !important;
+}
+
+/* codice inline e badge comando */
+html[data-theme="dark"] code,
+html[data-theme="dark"] pre code,
+html[data-theme="dark"] .badge,
+html[data-theme="dark"] .cmd-badge {
+  background-color: #2d2d2d !important;
+  color: #f8f8f2 !important;
+}
+
+/* se hai <pre> chiari dentro callout */
+html[data-theme="dark"] pre {
+  background-color: #121212 !important;
+  color: #f8f8f2 !important;
+}
