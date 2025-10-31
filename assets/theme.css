@@ -88,3 +88,39 @@ html[data-theme="dark"][data-contrast="aaa"] .callout{
   background:#20232a;
   border-left-color:#ffae6a;
 }
+/* ===== Fix contrasto per tema scuro (2025-10) ===== */
+html[data-theme="dark"] body,
+html[data-theme="dark"] section,
+html[data-theme="dark"] article,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .content,
+html[data-theme="dark"] .callout,
+html[data-theme="dark"] .callout-info,
+html[data-theme="dark"] .callout-warning,
+html[data-theme="dark"] .callout-success,
+html[data-theme="dark"] .note,
+html[data-theme="dark"] .tip {
+  color: #f1f1f1 !important;
+  background-color: #1c1c1c !important;
+}
+html[data-theme="dark"] .callout-info {
+  background-color: #1e2a2a !important;
+  border-left: 4px solid #2dd4bf !important;
+}
+html[data-theme="dark"] .callout-warning {
+  background-color: #2a251b !important;
+  border-left: 4px solid #facc15 !important;
+}
+html[data-theme="dark"] .callout-success {
+  background-color: #1b2a1c !important;
+  border-left: 4px solid #4ade80 !important;
+}
+html[data-theme="dark"] code,
+html[data-theme="dark"] pre code {
+  color: #f8f8f2 !important;
+  background-color: #2d2d2d !important;
+}
+html[data-theme="dark"] a {
+  color: #93c5fd;
+}
+/* ===== Fine fix contrasto ===== */
