@@ -232,4 +232,7 @@ pre[class*="language-"] {
 code[class*="language-"] {
   border-radius: 8px;
 }
-
+pre[class*="language-"],
+code[class*="language-"] {
+  background: #181a1f !important;  /* o il colore che preferisci */
+}
