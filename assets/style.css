@@ -206,4 +206,9 @@ html[data-theme="dark"] .panel{
 html[data-theme="dark"] #contrastToggle.is-active{
   /* in dark lasciamo ghost arancione; in light resta blu quando non attivo */
 }
+pre code {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  border-radius: 8px;
+}
 
