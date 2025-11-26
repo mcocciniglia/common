@@ -236,3 +236,40 @@ pre[class*="language-"],
 code[class*="language-"] {
   background: #181a1f !important;  /* o il colore che preferisci */
 }
+/* Blocchi di codice Prism: stile più pulito (senza "bande") */
+pre[class*="language-"],
+code[class*="language-"]{
+  background: var(--code-bg) !important;
+  color: var(--fg);
+  border-radius: 12px;
+  padding: 0.75em 1em;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+/* Elimina lo sfondo "a mattoncini" messo dal tema Prism */
+pre[class*="language-"] code,
+pre[class*="language-"] code *{
+  background: transparent !important;
+}
+
+/* Alcuni colori base per la sintassi (semplici e leggibili) */
+.token.comment{
+  color: #6b7280;
+  font-style: italic;
+}
+.token.punctuation{
+  color: #4b5563;
+}
+.token.tag,
+.token.keyword{
+  color: #b91c1c;
+}
+.token.attr-name{
+  color: #2563eb;
+}
+.token.attr-value,
+.token.string{
+  color: #059669;
+}
