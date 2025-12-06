@@ -11,15 +11,25 @@
   }
 
   function applyTheme(theme) {
-    ROOT.setAttribute("data-theme", theme);
-    localStorage.setItem(STORAGE_KEY, theme);
-    const btn = document.getElementById("themeToggle");
-    if (btn) {
-      const label = btn.querySelector(".btn-label");
-      if (label) label.textContent = theme === "dark" ? "Tema scuro" : "Tema chiaro";
-      btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  ROOT.setAttribute("data-theme", theme);
+  localStorage.setItem(STORAGE_KEY, theme);
+
+  // supporta sia id="themeToggle" sia id="theme-toggle"
+  const btn =
+    document.getElementById("themeToggle") ||
+    document.getElementById("theme-toggle");
+
+  if (btn) {
+    const label = btn.querySelector(".btn-label");
+    if (label) {
+      label.textContent = theme === "dark"
+        ? "Tema scuro 🌙"
+        : "Tema chiaro ☀️";
     }
+    btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
   }
+}
+
 
   function toggleTheme() {
     const cur = ROOT.getAttribute("data-theme");
@@ -41,16 +51,7 @@
     if (btn) btn.addEventListener("click", toggleTheme);
   });
 })();
-window.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
-  const cBtn = document.getElementById("contrastToggle");
-  if (!cBtn) return;
-  cBtn.addEventListener("click", () => {
-    const on = root.getAttribute("data-contrast") === "aaa";
-    root.setAttribute("data-contrast", on ? "" : "aaa");
-    cBtn.textContent = on ? "Contrasto AA/AAA" : "Contrasto: AAA attivo";
-  });
-});
+
 window.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const cBtn = document.getElementById("contrastToggle");

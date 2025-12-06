@@ -61,7 +61,7 @@ html[data-theme="dark"] hr{ border-color: var(--panel-border) !important; }
 /* Bottoni e toggle tema */
 html[data-theme="dark"] .btn      { background: var(--brand); color:#fff !important; }
 html[data-theme="dark"] .btn-ghost{ background: transparent; color: var(--brand) !important; border-color: var(--brand); }
-html[data-theme="dark"] #theme-toggle{ background: var(--brand); color:#fff; }
+html[data-theme="dark"] #themeToggle { background: var(--brand); color:#fff; }
 
 /* Opzionale: pannelli un filo più “piatti” */
 html[data-theme="dark"] .panel.soft{ box-shadow:none; }
@@ -174,4 +174,88 @@ html[data-theme="dark"] .cmd-badge {
 html[data-theme="dark"] pre {
   background-color: #121212 !important;
   color: #f8f8f2 !important;
+}
+/* ==========================================================
+   FIX PRISM.JS PER DARK MODE
+   Rimuove il "banding" e i conflitti di sfondo nei blocchi di codice
+   ========================================================== */
+html[data-theme="dark"] pre[class*="language-"] code,
+html[data-theme="dark"] pre[class*="language-"] code * {
+    background-color: transparent !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Opzionale: Assicura che il contenitore esterno abbia il colore giusto */
+html[data-theme="dark"] pre[class*="language-"] {
+    background-color: #2d2d2d !important; /* O il colore che preferisci per il box */
+    text-shadow: none !important;
+}
+/* ==========================================================
+   SINTASSI COLORATA PER DARK MODE (Manual Override)
+   Rende i colori di Prism leggibili su sfondo scuro
+   ========================================================== */
+
+/* 1. Colore base del testo (punteggiatura, parentesi, ecc.) */
+html[data-theme="dark"] pre[class*="language-"] code {
+  color: #f8f8f2 !important; /* Bianco sporco */
+}
+
+/* 2. Commenti (grigio chiaro) */
+html[data-theme="dark"] .token.comment,
+html[data-theme="dark"] .token.prolog,
+html[data-theme="dark"] .token.doctype,
+html[data-theme="dark"] .token.cdata {
+  color: #aab2bf !important;
+}
+
+/* 3. Punteggiatura (grigio medio) */
+html[data-theme="dark"] .token.punctuation {
+  color: #abb2bf !important;
+}
+
+/* 4. Tag HTML, Nomi di proprietà (Rosso/Rosa chiaro) */
+html[data-theme="dark"] .token.property,
+html[data-theme="dark"] .token.tag,
+html[data-theme="dark"] .token.boolean,
+html[data-theme="dark"] .token.number,
+html[data-theme="dark"] .token.constant,
+html[data-theme="dark"] .token.symbol,
+html[data-theme="dark"] .token.deleted {
+  color: #e06c75 !important;
+}
+
+/* 5. Selettori CSS, Nomi attributi (Arancione/Giallo) */
+html[data-theme="dark"] .token.selector,
+html[data-theme="dark"] .token.attr-name,
+html[data-theme="dark"] .token.string,
+html[data-theme="dark"] .token.char,
+html[data-theme="dark"] .token.builtin,
+html[data-theme="dark"] .token.inserted {
+  color: #98c379 !important; /* Verde pastello per le stringhe */
+}
+
+html[data-theme="dark"] .token.attr-name {
+  color: #d19a66 !important; /* Arancione per attributi */
+}
+
+/* 6. Operatori, Entità, Url (Ciano/Azzurro) */
+html[data-theme="dark"] .token.operator,
+html[data-theme="dark"] .token.entity,
+html[data-theme="dark"] .token.url,
+html[data-theme="dark"] .language-css .token.string,
+html[data-theme="dark"] .style .token.string {
+  color: #56b6c2 !important;
+}
+
+/* 7. Funzioni e Classi (Blu/Viola chiaro) */
+html[data-theme="dark"] .token.atrule,
+html[data-theme="dark"] .token.attr-value,
+html[data-theme="dark"] .token.keyword {
+  color: #c678dd !important; /* Viola per le keyword come 'if', 'return' */
+}
+html[data-theme="dark"] .token.function,
+html[data-theme="dark"] .token.class-name {
+  color: #61afef !important; /* Blu chiaro per le funzioni */
 }

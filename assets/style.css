@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap");
 
 /* Tema Prism per la sintassi colorata */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css");
+/*@import url("https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css");*/
 :root{
   --bg: #ffffff;
   --fg: #0e1116;
@@ -224,18 +224,7 @@ code[class*="language-"] span {
 }
 
 /* Un po' di padding e bordi arrotondati coerenti col resto del sito */
-pre[class*="language-"] {
-  padding: 0.75em 1em;
-  border-radius: 10px;
-}
 
-code[class*="language-"] {
-  border-radius: 8px;
-}
-pre[class*="language-"],
-code[class*="language-"] {
-  background: #181a1f !important;  /* o il colore che preferisci */
-}
 /* Blocchi di codice Prism: stile più pulito (senza "bande") */
 pre[class*="language-"],
 code[class*="language-"]{
