@@ -226,17 +226,15 @@ code[class*="language-"] span {
 /* Un po' di padding e bordi arrotondati coerenti col resto del sito */
 
 /* Blocchi di codice Prism: stile più pulito (senza "bande") */
-pre[class*="language-"],
-code[class*="language-"]{
-  background: var(--code-bg) !important;
-  color: var(--fg);
-  border-radius: 12px;
+pre[class*="language-"]{
   padding: 0.75em 1em;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  overflow-x: auto;
 }
 
+pre[class*="language-"] > code[class*="language-"]{
+  padding: 0 !important;
+  display: block;
+  background: transparent !important;
+}
 /* Elimina lo sfondo "a mattoncini" messo dal tema Prism */
 pre[class*="language-"] code,
 pre[class*="language-"] code *{
